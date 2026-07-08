@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Informe Técnico Empresarial - Llokalla Gaming">
+  <title>Informe Técnico | Llokalla Gaming</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ============================================
+       🎮 ESTILOS GAMING PARA INFORME
+       ============================================ */
+
+    .informe-page {
+      padding: 10rem 0 4rem;
+      background: var(--bg-primary);
+      position: relative;
+    }
+
+    /* Fondo animado sutil */
+    .informe-page::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 20% 30%, rgba(168, 85, 247, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(193, 166, 117, 0.06) 0%, transparent 40%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .informe-page .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ============================================
+       HEADER ÉPICO CON EFECTO GAMING
+       ============================================ */
+    .informe-header {
+      text-align: center;
+      margin-bottom: 5rem;
+      padding: 5rem 2rem;
+      background: 
+        linear-gradient(135deg, rgba(26, 26, 46, 0.85), rgba(15, 15, 26, 0.95)),
+        radial-gradient(circle at center, rgba(168, 85, 247, 0.15), transparent 70%);
+      border-radius: 24px;
+      border: 2px solid rgba(193, 166, 117, 0.3);
+      box-shadow: 
+        0 20px 80px rgba(0, 0, 0, 0.6),
+        0 0 60px rgba(168, 85, 247, 0.15),
+        inset 0 0 80px rgba(168, 85, 247, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Línea superior brillante */
+    .informe-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, 
+        transparent, 
+        var(--accent-gold), 
+        #A855F7, 
+        var(--accent-gold), 
+        transparent);
+      animation: headerLine 3s linear infinite;
+      background-size: 200% 100%;
+    }
+
+    @keyframes headerLine {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+
+    /* Destellos de fondo */
+    .informe-header::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(193, 166, 117, 0.1), transparent 70%);
+      transform: translate(-50%, -50%);
+      animation: pulseGlow 4s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
+      50% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.2); }
+    }
+
+    .informe-header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      color: var(--text-title);
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      font-weight: 900;
+      text-shadow: 
+        0 0 20px rgba(193, 166, 117, 0.8),
+        0 0 40px rgba(168, 85, 247, 0.5),
+        0 0 60px rgba(168, 85, 247, 0.3),
+        2px 2px 4px rgba(0, 0, 0, 0.9);
+      position: relative;
+      z-index: 2;
+    }
+
+    .informe-header .subtitle {
+      color: var(--text-body);
+      font-size: 1.2rem;
+      max-width: 850px;
+      margin: 0 auto;
+      line-height: 1.8;
+      position: relative;
+      z-index: 2;
+      text-shadow: 0 0 8px rgba(168, 85, 247, 0.2);
+    }
+
+    /* Badge superior */
+    .informe-badge {
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      background: rgba(193, 166, 117, 0.15);
+      border: 1px solid var(--accent-gold);
+      border-radius: 50px;
+      color: var(--accent-gold);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 20px rgba(193, 166, 117, 0.3);
+      position: relative;
+      z-index: 2;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--accent-gold);
+      text-decoration: none;
+      font-weight: 600;
+      margin-bottom: 2.5rem;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      background: rgba(193, 166, 117, 0.05);
+      border: 1px solid rgba(193, 166, 117, 0.2);
+    }
+
+    .back-link:hover {
+      color: var(--accent-gold-light);
+      transform: translateX(-8px);
+      background: rgba(193, 166, 117, 0.1);
+      box-shadow: 0 0 20px rgba(193, 166, 117, 0.3);
+    }
+
+    /* ============================================
+       🎯 CAJAS DE INFORME - CON ESTILO GAMING
+       ============================================ */
+    .caja-informe {
+      background: linear-gradient(145deg, rgba(26, 26, 46, 0.7), rgba(15, 15, 26, 0.85));
+      border-radius: 20px;
+      padding: 3rem;
+      margin-bottom: 3rem;
+      border: 1px solid rgba(193, 166, 117, 0.2);
+      box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(168, 85, 247, 0.08);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Borde lateral brillante en lugar de sólido */
+    .caja-informe::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--accent-gold),
+        #A855F7,
+        var(--accent-gold),
+        transparent
+      );
+      box-shadow: 0 0 15px rgba(193, 166, 117, 0.6);
+    }
+
+    /* Efecto hover gaming */
+    .caja-informe:hover {
+      transform: translateY(-8px);
+      border-color: rgba(193, 166, 117, 0.4);
+      box-shadow: 
+        0 25px 70px rgba(0, 0, 0, 0.6),
+        0 0 50px rgba(168, 85, 247, 0.2),
+        0 0 80px rgba(193, 166, 117, 0.15),
+        inset 0 0 60px rgba(168, 85, 247, 0.05);
+    }
+
+    /* Número de sección estilo gaming */
+    .caja-informe h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem;
+      color: var(--accent-gold);
+      margin-bottom: 2rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 2px solid rgba(193, 166, 117, 0.3);
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 
+        0 0 10px rgba(193, 166, 117, 0.5),
+        0 0 20px rgba(168, 85, 247, 0.3),
+        2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Icono del número con glow */
+    .caja-informe h3::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: var(--accent-gold);
+      border-radius: 50%;
+      box-shadow: 
+        0 0 15px var(--accent-gold),
+        0 0 30px var(--accent-gold);
+      animation: iconPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes iconPulse {
+      0%, 100% { 
+        box-shadow: 0 0 15px var(--accent-gold), 0 0 30px var(--accent-gold);
+        transform: scale(1);
+      }
+      50% { 
+        box-shadow: 0 0 20px var(--accent-gold), 0 0 40px var(--accent-gold);
+        transform: scale(1.2);
+      }
+    }
+
+    .caja-informe p {
+      color: var(--text-body);
+      line-height: 1.9;
+      margin-bottom: 1.3rem;
+      text-align: justify;
+      font-size: 1.02rem;
+    }
+
+    .caja-informe ul {
+      color: var(--text-body);
+      margin: 1.5rem 0;
+      padding-left: 2rem;
+    }
+
+    .caja-informe li {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      position: relative;
+    }
+
+    .caja-informe li::marker {
+      color: var(--accent-gold);
+    }
+
+    .caja-informe strong {
+      color: var(--text-title);
+      font-weight: 600;
+      text-shadow: 0 0 8px rgba(193, 166, 117, 0.3);
+    }
+
+    .caja-informe em {
+      color: var(--accent-gold-light);
+      font-style: italic;
+      text-shadow: 0 0 8px rgba(193, 166, 117, 0.3);
+    }
+
+    /* ============================================
+       💎 FICHA TÉCNICA - CON ESTILO GAMING
+       ============================================ */
+    .ficha-tecnica {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 2.5rem 0;
+      padding: 2.5rem;
+      background: 
+        linear-gradient(145deg, rgba(193, 166, 117, 0.08), rgba(168, 85, 247, 0.05)),
+        rgba(15, 15, 26, 0.5);
+      border-radius: 16px;
+      border: 1px solid rgba(193, 166, 117, 0.25);
+      box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.4),
+        inset 0 0 40px rgba(168, 85, 247, 0.05);
+      position: relative;
+    }
+
+    /* Línea decorativa superior */
+    .ficha-tecnica::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: linear-gradient(90deg, 
+        transparent, 
+        var(--accent-gold), 
+        transparent);
+      box-shadow: 0 0 10px var(--accent-gold);
+    }
+
+    .ficha-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 1.2rem;
+      background: rgba(15, 15, 26, 0.6);
+      border-radius: 12px;
+      border: 1px solid rgba(193, 166, 117, 0.15);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Efecto brillo en hover */
+    .ficha-item::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(193, 166, 117, 0.1),
+        transparent
+      );
+      transform: rotate(45deg) translate(-100%, -100%);
+      transition: transform 0.6s ease;
+    }
+
+    .ficha-item:hover::before {
+      transform: rotate(45deg) translate(100%, 100%);
+    }
+
+    .ficha-item:hover {
+      background: rgba(193, 166, 117, 0.1);
+      border-color: var(--accent-gold);
+      transform: translateY(-3px);
+      box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(193, 166, 117, 0.2);
+    }
+
+    .ficha-label {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.8rem;
+      color: var(--accent-gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      text-shadow: 0 0 8px rgba(193, 166, 117, 0.5);
+      position: relative;
+      z-index: 1;
+    }
+
+    .ficha-value {
+      color: var(--text-body);
+      font-size: 1rem;
+      line-height: 1.5;
+      position: relative;
+      z-index: 1;
+    }
+
+    .ficha-value strong {
+      color: var(--text-title);
+      text-shadow: 0 0 8px rgba(193, 166, 117, 0.3);
+    }
+
+    /* ============================================
+       📊 TABLA FINANCIERA - ESTILO GAMING
+       ============================================ */
+    .tabla-container {
+      margin: 3rem 0;
+      overflow-x: auto;
+      border-radius: 16px;
+      box-shadow: 
+        0 15px 50px rgba(0, 0, 0, 0.5),
+        0 0 40px rgba(168, 85, 247, 0.1);
+      position: relative;
+    }
+
+    /* Borde brillante alrededor de la tabla */
+    .tabla-container::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 18px;
+      background: linear-gradient(
+        45deg,
+        var(--accent-gold),
+        #A855F7,
+        var(--accent-gold),
+        #A855F7
+      );
+      background-size: 300% 300%;
+      animation: tableGlow 4s ease-in-out infinite;
+      z-index: -1;
+      opacity: 0.6;
+    }
+
+    @keyframes tableGlow {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .tabla-informe {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: linear-gradient(145deg, rgba(26, 26, 46, 0.9), rgba(15, 15, 26, 0.95));
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .tabla-informe thead {
+      background: linear-gradient(135deg, rgba(45, 27, 105, 0.9), rgba(26, 16, 64, 0.95));
+      position: relative;
+    }
+
+    /* Línea brillante bajo el header */
+    .tabla-informe thead::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, 
+        transparent, 
+        var(--accent-gold), 
+        #A855F7, 
+        var(--accent-gold), 
+        transparent);
+      box-shadow: 0 0 10px var(--accent-gold);
+    }
+
+    .tabla-informe th {
+      padding: 1.5rem 1.8rem;
+      color: var(--accent-gold);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: left;
+      border-bottom: 2px solid var(--accent-gold);
+      font-weight: 700;
+      text-shadow: 
+        0 0 10px rgba(193, 166, 117, 0.6),
+        0 0 20px rgba(193, 166, 117, 0.3);
+    }
+
+    .tabla-informe td {
+      padding: 1.2rem 1.8rem;
+      color: var(--text-body);
+      font-size: 0.95rem;
+      border-bottom: 1px solid rgba(193, 166, 117, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    .tabla-informe tbody tr {
+      transition: all 0.3s ease;
+    }
+
+    .tabla-informe tbody tr:hover {
+      background: rgba(193, 166, 117, 0.1);
+    }
+
+    .tabla-informe tbody tr:hover td {
+      color: var(--text-title);
+      transform: translateX(5px);
+      text-shadow: 0 0 8px rgba(193, 166, 117, 0.3);
+    }
+
+    .tabla-informe tbody tr:last-child td {
+      border-bottom: none;
+      font-weight: 700;
+      color: var(--accent-gold);
+      font-size: 1.05rem;
+      background: rgba(193, 166, 117, 0.15);
+      text-shadow: 0 0 10px rgba(193, 166, 117, 0.5);
+    }
+
+    .tabla-informe td:first-child {
+      font-weight: 600;
+      color: var(--text-title);
+    }
+
+    .tabla-informe .valor-negativo {
+      color: #ff6b6b;
+      text-shadow: 0 0 8px rgba(255, 107, 107, 0.4);
+    }
+
+    .tabla-informe .valor-positivo {
+      color: #4ecdc4;
+      text-shadow: 0 0 8px rgba(78, 205, 196, 0.4);
+    }
+
+    /* ============================================
+       📌 NOTA INFORMATIVA - ESTILO GAMING
+       ============================================ */
+    .nota-informe {
+      background: 
+        linear-gradient(135deg, rgba(193, 166, 117, 0.1), rgba(168, 85, 247, 0.05)),
+        rgba(15, 15, 26, 0.6);
+      border-left: 4px solid var(--accent-gold);
+      padding: 2rem 2.5rem;
+      margin: 2.5rem 0;
+      border-radius: 0 16px 16px 0;
+      font-style: italic;
+      color: var(--text-body);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(193, 166, 117, 0.1);
+    }
+
+    /* Icono decorativo */
+    .nota-informe::before {
+      content: '⚡';
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 4rem;
+      color: rgba(193, 166, 117, 0.15);
+      font-style: normal;
+    }
+
+    .nota-informe strong {
+      color: var(--accent-gold);
+      display: block;
+      margin-bottom: 0.8rem;
+      font-style: normal;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.05rem;
+      letter-spacing: 1px;
+      text-shadow: 0 0 10px rgba(193, 166, 117, 0.5);
+    }
+
+    /* ============================================
+       🎯 LISTA DESTACADA - ESTILO GAMING
+       ============================================ */
+    .lista-destacada {
+      margin: 2rem 0;
+    }
+
+    .lista-destacada .item-pestel {
+      margin-bottom: 1.5rem;
+      padding: 1.5rem 1.8rem;
+      background: 
+        linear-gradient(145deg, rgba(26, 26, 46, 0.6), rgba(15, 15, 26, 0.7));
+      border-radius: 12px;
+      border: 1px solid rgba(193, 166, 117, 0.15);
+      border-left: 4px solid var(--accent-gold);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Efecto brillo lateral */
+    .lista-destacada .item-pestel::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        rgba(193, 166, 117, 0.1),
+        transparent
+      );
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .lista-destacada .item-pestel:hover {
+      background: 
+        linear-gradient(145deg, rgba(193, 166, 117, 0.1), rgba(15, 15, 26, 0.8));
+      transform: translateX(10px);
+      border-left-color: var(--accent-gold-light);
+      box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(193, 166, 117, 0.2);
+    }
+
+    .lista-destacada .item-pestel:hover::before {
+      opacity: 1;
+    }
+
+    .lista-destacada .item-pestel strong {
+      color: var(--accent-gold);
+      display: block;
+      margin-bottom: 0.8rem;
+      font-size: 1.1rem;
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 1px;
+      text-shadow: 0 0 10px rgba(193, 166, 117, 0.5);
+      position: relative;
+      z-index: 1;
+    }
+
+    .lista-destacada .item-pestel p,
+    .lista-destacada .item-pestel {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ============================================
+       🎨 DECORACIONES GAMING
+       ============================================ */
+    
+    /* Separador entre secciones */
+    .section-divider {
+      height: 2px;
+      background: linear-gradient(90deg, 
+        transparent, 
+        var(--accent-gold), 
+        #A855F7, 
+        var(--accent-gold), 
+        transparent);
+      margin: 3rem auto;
+      max-width: 600px;
+      box-shadow: 0 0 15px rgba(193, 166, 117, 0.5);
+      opacity: 0.6;
+    }
+
+    /* ============================================
+       📱 RESPONSIVE
+       ============================================ */
+    @media (max-width: 768px) {
+      .caja-informe {
+        padding: 2rem 1.5rem;
+      }
+
+      .caja-informe h3 {
+        font-size: 1.4rem;
+      }
+
+      .ficha-tecnica {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1.5rem;
+      }
+
+      .tabla-informe th,
+      .tabla-informe td {
+        padding: 1rem;
+        font-size: 0.85rem;
+      }
+
+      .informe-header {
+        padding: 3rem 1.5rem;
+      }
+
+      .informe-header h1 {
+        letter-spacing: 3px;
+      }
+    }
+
+    /* ============================================
+       🎬 ANIMACIONES DE ENTRADA
+       ============================================ */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .caja-informe {
+      opacity: 0;
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .caja-informe:nth-child(1) { animation-delay: 0.1s; }
+    .caja-informe:nth-child(2) { animation-delay: 0.2s; }
+    .caja-informe:nth-child(3) { animation-delay: 0.3s; }
+    .caja-informe:nth-child(4) { animation-delay: 0.4s; }
+    .caja-informe:nth-child(5) { animation-delay: 0.5s; }
+    .caja-informe:nth-child(6) { animation-delay: 0.6s; }
+    .caja-informe:nth-child(7) { animation-delay: 0.7s; }
+    .caja-informe:nth-child(8) { animation-delay: 0.8s; }
+    .caja-informe:nth-child(9) { animation-delay: 0.9s; }
+    .caja-informe:nth-child(10) { animation-delay: 1s; }
+
+    /* Efecto de partículas flotantes */
+    @keyframes floatParticle {
+      0%, 100% { transform: translateY(0) translateX(0); opacity: 0.3; }
+      50% { transform: translateY(-20px) translateX(10px); opacity: 0.8; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🎮</span>
+        <span class="logo-text">Llokalla <span class="accent">Gaming</span></span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="juegos.html" class="nav-link">Juegos</a></li>
+        <li><a href="hardware.html" class="nav-link">Hardware</a></li>
+        <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+        <li><a href="informe.html" class="nav-link active">Informe</a></li>
+      </ul>
+
+      <button class="nav-toggle" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="informe-page">
+    <div class="container">
+      <a href="nosotros.html" class="back-link">← Volver a Nosotros</a>
+      
+      <div class="informe-header">
+        <div class="informe-badge">📊 Documento Oficial 2026</div>
+        <h1>Informe Técnico</h1>
+        <p class="subtitle">
+          Análisis estratégico integral de Llokalla Gaming SRL — Estructura organizacional, 
+          análisis de mercado, proyecciones financieras y hoja de ruta hacia el liderazgo 
+          del ecosistema gaming boliviano
+        </p>
+      </div>
+
+      <!-- SECCIÓN 1 -->
+      <section class="caja-informe">
+        <h3>01 · Identidad Corporativa</h3>
+        <p>
+          <strong>Llokalla Gaming</strong> representa una nueva generación de emprendimiento 
+          tecnológico en Bolivia. Constituida como <strong>Sociedad de Responsabilidad Limitada (SRL)</strong>, 
+          nuestra startup fusiona la pasión por el gaming de élite con una visión comercial 
+          innovadora, democratizando el acceso a productos AAA en el mercado nacional.
+        </p>
+        
+        <div class="ficha-tecnica">
+          <div class="ficha-item">
+            <span class="ficha-label">⚔️ Razón Social</span>
+            <span class="ficha-value"><strong>Llokalla Gaming SRL</strong></span>
+          </div>
+          <div class="ficha-item">
+            <span class="ficha-label">🎯 Sector Económico</span>
+            <span class="ficha-value">Tecnológico — Comercial / Servicios</span>
+          </div>
+          <div class="ficha-item">
+            <span class="ficha-label">📍 Ubicación</span>
+            <span class="ficha-value"><strong>La Paz, Bolivia</strong></span>
+          </div>
+          <div class="ficha-item">
+            <span class="ficha-label">👥 Estructura</span>
+            <span class="ficha-value">1 socio (33.3% c/u)</span>
+          </div>
+          <div class="ficha-item">
+            <span class="ficha-label">💰 Capital Social</span>
+            <span class="ficha-value"><strong>Bs. 45.000</strong></span>
+          </div>
+          <div class="ficha-item">
+            <span class="ficha-label">📅 Constitución</span>
+            <span class="ficha-value"><strong>2026</strong></span>
+          </div>
+        </div>
+
+        <p>
+          Nuestra propuesta de valor trasciende la simple comercialización: creamos 
+          <em>experiencias gaming completas</em> mediante asesoramiento personalizado, 
+          curaduría experta de productos y un canal de atención humanizado a través de 
+          WhatsApp Business que genera confianza en un mercado digital aún emergente.
+        </p>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- SECCIÓN 2 -->
+      <section class="caja-informe">
+        <h3>02 · Estructura Organizacional</h3>
+        <p>
+          Llokalla Gaming opera bajo un modelo <strong>horizontal y ágil</strong>, característico 
+          de las startups tecnológicas de alto crecimiento. La organización se estructura en 
+          tres áreas estratégicas interconectadas, cada una liderada por un socio fundador 
+          con autonomía operativa pero coordinación estratégica constante.
+        </p>
+
+        <div class="lista-destacada">
+          <div class="item-pestel">
+            <strong>🖥️ Área Tecnológica (CTO)</strong>
+            Arquitectura digital, desarrollo web, UX/UI, seguridad de datos, infraestructura 
+            cloud y optimización de performance. Responsable de mantener estándares AAA en 
+            la experiencia digital del cliente.
+          </div>
+          
+          <div class="item-pestel">
+            <strong>💼 Área Comercial (CCO)</strong>
+            Estrategia de ventas B2C, gestión de proveedores internacionales, marketing digital, 
+            community management y atención al cliente. Construye relaciones duraderas con la 
+            comunidad gamer boliviana.
+          </div>
+          
+          <div class="item-pestel">
+            <strong>📊 Área Administrativa-Financiera (CFO)</strong>
+            Control financiero, cumplimiento tributario (SIN), logística de importación, 
+            gestión de inventario y relaciones institucionales. Garantiza la sostenibilidad 
+            económica del modelo.
+          </div>
+        </div>
+
+        <p>
+          <strong>Mecanismo de Toma de Decisiones:</strong> Implementamos un sistema 
+          <em>democrático-consensuado</em> donde las decisiones estratégicas (inversiones 
+          &gt; Bs. 2.000, nuevos proveedores, cambios de pricing) requieren aprobación de 
+          al menos 2 de 3 socios. Las decisiones operativas son autónomas por área, 
+          eliminando burocracia y acelerando la ejecución.
+        </p>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- SECCIÓN 3 -->
+      <section class="caja-informe">
+        <h3>03 · Análisis PESTEL</h3>
+        <p>
+          El entorno macroambiental boliviano presenta oportunidades y desafíos específicos 
+          que Llokalla Gaming ha identificado y estratégico para convertir en ventajas 
+          competitivas sostenibles.
+        </p>
+
+        <div class="lista-destacada">
+          <div class="item-pestel">
+            <strong>P — Político-Legal</strong>
+            Estabilidad regulatoria en el sector tecnológico con la Ley N° 164 de Telecomunicaciones 
+            y políticas de la ADSIB que favorecen la digitalización. Sin embargo, las barreras 
+            arancelarias del 35% en importación de tecnología representan un desafío operativo 
+            que mitigamos mediante planificación logística anticipada y diversificación de proveedores.
+          </div>
+
+          <div class="item-pestel">
+            <strong>E — Económico</strong>
+            PIB en contracción del -3.3% proyectado para 2026 según el FMI, reflejando un escenario 
+            de ajuste macroeconómico. Inflación de 9.23% interanual (junio 2026) con presión importada 
+            significativa en productos tecnológicos dolarizados. Tipo de cambio oficial Bs. 9.96/USD 
+            (vigente desde julio 2026) tras la flexibilización cambiaria implementada en diciembre 2025. 
+            Desempleo urbano del 3.2% (primer trimestre 2026) pero con alta informalidad laboral (80%+), 
+            definiendo nuestro foco en el segmento medio-alto con capacidad de ahorro en dólares.
+          </div>
+
+          <div class="item-pestel">
+            <strong>S — Sociocultural</strong>
+            7 millones de usuarios de internet (60% penetración) y 78% de smartphones. 
+            Población gamer estimada en <strong>2.5 millones</strong>, predominantemente 15-35 años. 
+            Cultura gaming en expansión impulsada por torneos locales, streamers bolivianos y 
+            títulos masivos como Free Fire, FIFA y Call of Duty. El nombre "Llokalla" (quechua: 
+            "joven audaz") genera conexión emocional con la identidad cultural local.
+          </div>
+
+          <div class="item-pestel">
+            <strong>T — Tecnológico</strong>
+            Infraestructura de internet mejorada con fibra óptica y 4G/LTE en ciudades principales. 
+            E-commerce creciendo al 25% anual aunque representa menos del 2% del PIB. Adopción 
+            acelerada de pagos digitales (transferencias, QR Simple) que facilitan transacciones 
+            online sin fricción.
+          </div>
+
+          <div class="item-pestel">
+            <strong>E — Ecológico</strong>
+            Gestión de e-waste como desafío emergente. Llokalla Gaming incorpora economía 
+            circular mediante programas de reciclaje de hardware obsoleto y "trade-in" para 
+            equipos usados, diferenciándonos como empresa socialmente responsable.
+          </div>
+
+          <div class="item-pestel">
+            <strong>L — Legal</strong>
+            Operamos bajo Código de Comercio, Ley N° 453 de Protección al Consumidor y 
+            normativas SIN. Productos importados cumplen registros SENASAG y Aduana Nacional. 
+            Protección de datos bajo Ley N° 548, aunque Bolivia carece aún de regulación 
+            específica comparable al GDPR europeo.
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- SECCIÓN 4 -->
+      <section class="caja-informe">
+        <h3>04 · Análisis Macro</h3>
+        <p>
+          Cuatro variables macroeconómicas determinan la viabilidad y escalabilidad de nuestro 
+          modelo de negocio en el contexto boliviano actual:
+        </p>
+
+        <div class="ficha-tecnica">
+          <div class="ficha-item">
+            <span class="ficha-label">📈 PIB y Crecimiento</span>
+            <span class="ficha-value">Contracción -3.3% proyectado (2026). Ajuste macroeconómico tras flexibilidad cambiaria. Sector tecnológico muestra resiliencia relativa con demanda sostenida de gaming.</span>
+          </div>
+          
+          <div class="ficha-item">
+            <span class="ficha-label">💹 Inflación</span>
+            <span class="ficha-value"><strong>9.23% interanual</strong> (junio 2026). Presión inflacionaria significativa obliga revisiones mensuales de precios en productos dolarizados. Margen de seguridad del 20% sobre costos.</span>
+          </div>
+          
+          <div class="ficha-item">
+            <span class="ficha-label">💱 Tipo de Cambio</span>
+            <span class="ficha-value"><strong>Bs. 9.96/USD</strong> oficial (julio 2026). Variable crítica: 90% de productos cotizan en dólares. Mantenemos colchón financiero del 20% sobre precio de venta para absorber volatilidad.</span>
+          </div>
+          
+          <div class="ficha-item">
+            <span class="ficha-label">💼 Empleo</span>
+            <span class="ficha-value">Desempleo 3.2% urbano (Q1 2026) pero 80%+ informalidad. Segmento objetivo: población con acceso a divisas o ingresos en USD, dispuesta a pagar premium por garantía local.</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- SECCIÓN 5 -->
+      <section class="caja-informe">
+        <h3>05 · Estrategia Competitiva</h3>
+        <p>
+          <strong>Estrategia de Precios:</strong> Posicionamiento en <strong>premium accesible</strong>, 
+          ocupando el espacio entre retailers informales (mercados sin garantía) y plataformas 
+          internacionales (sin atención localizada). Markup del 35-45% sobre costo CIF que 
+          justifica valor agregado: garantía local, soporte en español, asesoramiento experto 
+          y entrega rápida.
+        </p>
+
+        <p><strong>Mapa Competitivo:</strong></p>
+        <ul>
+          <li><strong>Tiendas físicas locales</strong> (Gamers Bolivia, TechZone, Importadora Gamer): 
+          Competencia en precio pero carecen de experiencia digital premium y atención personalizada.</li>
+          
+          <li><strong>Marketplaces informales</strong> (Facebook Marketplace, grupos WhatsApp): 
+          Precios bajos pero sin garantía, soporte post-venta ni trazabilidad. Alto riesgo de fraude 
+          percibido por consumidores.</li>
+          
+          <li><strong>Plataformas digitales globales</strong> (Steam, Epic Games, MercadoLibre): 
+          Conveniencia y catálogo amplio pero sin curaduría, atención en bolivianos ni adaptación 
+          al contexto local.</li>
+        </ul>
+
+        <div class="nota-informe">
+          <strong>Ventaja Competitiva Diferencial:</strong>
+          Llokalla Gaming combina <em>curaduría experta + atención humana vía WhatsApp + identidad 
+          cultural boliviana + experiencia web AAA</em>. Ningún competidor local ofrece esta 
+          propuesta de valor integrada, especialmente crítica en un mercado donde el 67% de 
+          consumidores desconfía de transacciones online por fraudes previos.
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- SECCIÓN 6, 7 y 8 -->
+      <section class="caja-informe">
+        <h3>06 · Proyección Financiera</h3>
+        <p>
+          La siguiente proyección financiera detalla el desempeño esperado para el trimestre 
+          inicial de operaciones (Julio-Septiembre 2026). Los porcentajes de gastos se aplican 
+          sobre ingresos brutos según estructura de costos definida: Gastos Administrativos (20%), 
+          Gastos Comerciales (25%) e IUE (25% sobre utilidad antes de impuestos).
+        </p>
+
+        <div class="tabla-container">
+          <table class="tabla-informe">
+            <thead>
+              <tr>
+                <th>Concepto</th>
+                <th>Julio 2026</th>
+                <th>Agosto 2026</th>
+                <th>Septiembre 2026</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Ingresos Brutos por Ventas</strong></td>
+                <td>Bs. 18.500</td>
+                <td>Bs. 24.800</td>
+                <td>Bs. 32.400</td>
+              </tr>
+              <tr>
+                <td>Costo de Mercancía Vendida (CMV)</td>
+                <td class="valor-negativo">(Bs. 11.100)</td>
+                <td class="valor-negativo">(Bs. 14.880)</td>
+                <td class="valor-negativo">(Bs. 19.440)</td>
+              </tr>
+              <tr>
+                <td><strong>Utilidad Bruta</strong></td>
+                <td class="valor-positivo">Bs. 7.400</td>
+                <td class="valor-positivo">Bs. 9.920</td>
+                <td class="valor-positivo">Bs. 12.960</td>
+              </tr>
+              <tr>
+                <td>Gastos Administrativos (20%)</td>
+                <td class="valor-negativo">(Bs. 3.700)</td>
+                <td class="valor-negativo">(Bs. 4.960)</td>
+                <td class="valor-negativo">(Bs. 6.480)</td>
+              </tr>
+              <tr>
+                <td>Gastos Comerciales (25%)</td>
+                <td class="valor-negativo">(Bs. 4.625)</td>
+                <td class="valor-negativo">(Bs. 6.200)</td>
+                <td class="valor-negativo">(Bs. 8.100)</td>
+              </tr>
+              <tr>
+                <td><strong>Utilidad Operativa</strong></td>
+                <td class="valor-negativo">(Bs. 925)</td>
+                <td class="valor-negativo">(Bs. 1.240)</td>
+                <td class="valor-negativo">(Bs. 1.620)</td>
+              </tr>
+              <tr>
+                <td>Utilidad Antes de Impuestos (UAI)</td>
+                <td>(Bs. 925)</td>
+                <td>(Bs. 1.240)</td>
+                <td>(Bs. 1.620)</td>
+              </tr>
+              <tr>
+                <td>IUE (25%)</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td><strong>BENEFICIO NETO FINAL</strong></td>
+                <td class="valor-negativo"><strong>(Bs. 925)</strong></td>
+                <td class="valor-negativo"><strong>(Bs. 1.240)</strong></td>
+                <td class="valor-negativo"><strong>(Bs. 1.620)</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Margen Neto (%)</strong></td>
+                <td><strong>-5.0%</strong></td>
+                <td><strong>-5.0%</strong></td>
+                <td><strong>-5.0%</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="nota-informe">
+          <strong>Nota Metodológica:</strong>
+          Los valores negativos reflejan la etapa de lanzamiento, donde los gastos comerciales 
+          (marketing, adquisición de clientes) superan temporalmente los ingresos. Se proyecta 
+          alcanzar el <strong>punto de equilibrio operativo en el mes 5</strong> (noviembre 2026) 
+          con ingresos sostenidos superiores a Bs. 38.000 mensuales.
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- SECCIÓN 9 -->
+      <section class="caja-informe">
+        <h3>07 · Variaciones Agosto-Septiembre</h3>
+        <p>
+          El incremento del <strong>30.6% en ingresos</strong> proyectado entre agosto 
+          (Bs. 24.800) y septiembre (Bs. 32.400) responde a factores estructurales y 
+          coyunturales del mercado boliviano:
+        </p>
+
+        <div class="lista-destacada">
+          <div class="item-pestel">
+            <strong>a) Estacionalidad del Mercado Gamer</strong>
+            Septiembre coincide con el regreso a clases universitarias (UMSA, UPSA, UCB, 
+            UPB). Periodo de pico anual en compra de hardware gaming (laptops, periféricos) 
+            por estudiantes universitarios, nuestro segmento objetivo principal. Históricamente, 
+            tiendas gamer reportan incrementos del 25-35% en este mes.
+          </div>
+
+          <div class="item-pestel">
+            <strong>b) Lanzamientos AAA y Demanda Anticipada</strong>
+            Septiembre tradicionalmente concentra lanzamientos de títulos AAA (coincide con 
+            Tokyo Game Show y anuncios previos al Q4). Títulos esperados generan demanda de 
+            hardware compatible (GPUs, monitores 144Hz), elevando el ticket promedio de compra 
+            en 15-20%.
+          </div>
+
+          <div class="item-pestel">
+            <strong>c) Factores de Demanda Local</strong>
+            Ferias comerciales del "Aniversario de La Paz" (16 julio) se extienden hasta 
+            agosto-septiembre, generando mayor circulación de capital en segmento tecnológico. 
+            Expectativa del bono "Juancito Pinto" (octubre) anticipa gasto familiar parcialmente 
+            en septiembre.
+          </div>
+
+          <div class="item-pestel">
+            <strong>d) Escalamiento Comercial y Remarketing</strong>
+            Para septiembre, Llokalla Gaming habrá consolidado base de datos de 
+            <strong>450 contactos activos</strong> en WhatsApp Business, permitiendo campañas 
+            de remarketing con tasa de conversión estimada del 8-12%, superior al 3-5% inicial 
+            de julio.
+          </div>
+
+          <div class="item-pestel">
+            <strong>e) Eficiencia en Gastos</strong>
+            Gastos comerciales crecen proporcionalmente (25%) por intensificación de campañas 
+            Meta Ads y TikTok Ads al segmento universitario. Gastos administrativos se mantienen 
+            proporcionales (20%) gracias a escalabilidad del modelo digital: no requiere ampliar 
+            infraestructura física para mayor volumen.
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- SECCIÓN 10 -->
+      <section class="caja-informe">
+        <h3>08 · Visión 2028</h3>
+        <p>
+          Llokalla Gaming se posiciona en un <strong>momento de oportunidad estructural</strong> 
+          del mercado boliviano: una generación de jóvenes nativos digitales, con identidad 
+          gamer consolidada y disposición a pagar por experiencias premium localizadas. Aunque 
+          los primeros meses operativos muestran resultados negativos —típicos de cualquier 
+          startup en fase de validación—, la estructura de costos escalable y el modelo 
+          <em>asset-light</em> (sin inventario físico masivo, dropshipping selectivo) permiten 
+          alcanzar rentabilidad en el corto plazo.
+        </p>
+
+        <p>
+          La fortaleza diferencial de la empresa no reside únicamente en los productos que 
+          comercializa, sino en la <strong>experiencia de marca integral</strong>: identidad 
+          visual AAA, atención humana en jerga local boliviana ("cuña'o", "pues", "jala perfecto") 
+          y una comunidad que trasciende la transacción comercial. En un mercado donde la 
+          confianza es la moneda más valiosa, Llokalla Gaming construye capital reputacional 
+          desde el primer contacto.
+        </p>
+
+        <div class="nota-informe">
+          <strong>Visión 2028 — Hoja de Ruta Estratégica:</strong>
+          <br>
+          • Consolidarse como <strong>plataforma gamer #1 de Bolivia</strong> con presencia 
+          física en La Paz, Santa Cruz y Cochabamba
+          <br>
+          • Alianzas estratégicas con marcas internacionales (Razer, Logitech, NVIDIA, AMD)
+          <br>
+          • Ecosistema propio que incluya: torneos esports con premios, contenido original 
+          (reviews, guías), y programa de financiamiento de equipos gaming para talentos locales
+          <br>
+          • Facturación anual proyectada: <strong>Bs. 850.000</strong> con margen neto del 12-15%
+        </div>
+
+        <p>
+          El modelo de negocio de Llokalla Gaming demuestra viabilidad técnica, comercial y 
+          financiera. La combinación de <em>timing de mercado + propuesta de valor diferenciada + 
+          ejecución ágil</em> posiciona a la empresa para capturar cuota de mercado significativa 
+          en el creciente ecosistema gaming boliviano, proyectándose como referente regional 
+          en comercialización tecnológica con identidad local.
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-icon">🎮</span>
+          <span class="logo-text">Llokalla <span class="accent">Gaming</span></span>
+          <p>Llokalla Gaming: Jugando a otro nivel © 2026</p>
+        </div>
+        
+        <div class="footer-links">
+          <a href="juegos.html">Juegos</a>
+          <a href="hardware.html">Hardware</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="informe.html">Informe</a>
+        </div>
+
+        <div class="footer-contact">
+          <p>¿Necesitás ayuda, hermano?</p>
+          <a href="https://wa.me/59170000000" class="btn-whatsapp" target="_blank">
+            💬 Escribinos
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

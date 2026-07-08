@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hardware gaming premium - Llokalla Gaming Bolivia">
+  <title>Hardware - Llokalla Gaming</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- ✅ Estilos específicos para video de fondo en componentes.html -->
+  <!-- ✅ Estilos específicos para video de fondo en juegos.html -->
+  <style>
+    /* Video de fondo full screen solo en juegos.html */
+    .hero-video {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      min-width: 100% !important;
+      min-height: 100% !important;
+      object-fit: cover !important;
+      z-index: -2 !important;
+    }
+
+    /* Overlay oscuro MÁS SUAVE sobre el video para que se note más */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        rgba(8, 9, 10, 0.3) 0%,
+        rgba(8, 9, 10, 0.5) 50%,
+        rgba(8, 9, 10, 0.7) 100%
+      );
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* Quitar el fondo sólido del page-hero para que se vea el video */
+    .page-hero {
+      background: transparent !important;
+      padding: 10rem 0 4rem;
+    }
+
+    /* Quitar el fondo sólido de products-section */
+    .products-section {
+      background: transparent !important;
+    }
+
+    /* Quitar el fondo sólido del cta-final */
+    .cta-final {
+      background: transparent !important;
+    }
+
+    /* Asegurar que las tarjetas tengan fondo para que se lean bien */
+    .product-card {
+      background: linear-gradient(145deg, rgba(26, 26, 46, 0.85), rgba(15, 15, 26, 0.9)) !important;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    /* Navbar con fondo más sólido para que se lea sobre el video */
+    .navbar {
+      background: rgba(8, 9, 10, 0.85) !important;
+    }
+  </style>
+
+</head>
+<body>
+  <!-- Video de fondo -->
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="assets/video/gta-v-pause-theme.mp4" type="video/mp4">
+  </video>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🎮</span>
+        <span class="logo-text">Llokalla <span class="accent">Gaming</span></span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="juegos.html" class="nav-link">Juegos</a></li>
+        <li><a href="hardware.html" class="nav-link active">Hardware</a></li>
+        <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+        <li><a href="informe.html" class="nav-link">Informe</a></li>
+
+      </ul>
+
+      <button class="nav-toggle" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="page-title">HARDWARE PREMIUM</h1>
+      <p class="page-subtitle">Equipamiento que jala de verdad, pues</p>
+    </div>
+  </section>
+
+  <section class="products-section">
+    <div class="container">
+      <div class="products-grid">
+        
+        <!-- HARDWARE 1 - Teclado -->
+        <div class="product-card glow-card">
+          <div class="product-image">
+            <img src="assets/img/TecladoGaming.jpg" alt="Teclado que Jala">
+            <span class="product-badge">PRO</span>
+          </div>
+          <div class="product-content">
+            <span class="product-category">TECLADO · MECÁNICO</span>
+            <h3 class="product-title">Teclado que Jala</h3>
+            <p class="product-description">Switches Cherry MX, retroiluminación RGB. Jala perfecto pa' tus partidas, pues.</p>
+            <div class="product-actions">
+              <a href="https://wa.me/59170000000?text=Hola!%20Quiero%20el%20Teclado%20que%20Jala" class="btn-buy" target="_blank">
+                COMPRAR
+              </a>
+              <a href="https://wa.me/59170000000?text=Hola!%20Cuanto%20cuesta%20el%20Teclado%20que%20Jala" class="btn-price" target="_blank">
+                CONSULTAR PRECIO
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- HARDWARE 2 - Mouse -->
+        <div class="product-card glow-card">
+          <div class="product-image">
+            <img src="assets/img/MouseVolador.jpg" alt="Mouse Volador">
+            <span class="product-badge">NUEVO</span>
+          </div>
+          <div class="product-content">
+            <span class="product-category">MOUSE · ULTRALIGHT</span>
+            <h3 class="product-title">Mouse Volador</h3>
+            <p class="product-description">Sensor 25K DPI, ultraliviano 63g. Lo manejás como querás, hermano. Está chévere.</p>
+            <div class="product-actions">
+              <a href="https://wa.me/59170000000?text=Hola!%20Quiero%20el%20Mouse%20Volador" class="btn-buy" target="_blank">
+                COMPRAR
+              </a>
+              <a href="https://wa.me/59170000000?text=Hola!%20Cuanto%20cuesta%20el%20Mouse%20Volador" class="btn-price" target="_blank">
+                CONSULTAR PRECIO
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- HARDWARE 3 - Headset -->
+        <div class="product-card glow-card">
+          <div class="product-image">
+            <img src="assets/img/HeadsetQueSuenaFuerte.jpg" alt="Headset que Suena Fuerte">
+            <span class="product-badge">7.1 SURROUND</span>
+          </div>
+          <div class="product-content">
+            <span class="product-category">HEADSET · AUDIO</span>
+            <h3 class="product-title">Headset que Suena Fuerte</h3>
+            <p class="product-description">Sonido envolvente 7.1, micrófono que aísla el ruido. Escuchás todo, pues.</p>
+            <div class="product-actions">
+              <a href="https://wa.me/59170000000?text=Hola!%20Quiero%20el%20Headset%20que%20Suena%20Fuerte" class="btn-buy" target="_blank">
+                COMPRAR
+              </a>
+              <a href="https://wa.me/59170000000?text=Hola!%20Cuanto%20cuesta%20el%20Headset%20que%20Suena%20Fuerte" class="btn-price" target="_blank">
+                CONSULTAR PRECIO
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- HARDWARE 4 - Monitor -->
+        <div class="product-card glow-card">
+          <div class="product-image">
+            <img src="assets/img/PantallaGigante.jpg" alt="Pantalla Gigante">
+            <span class="product-badge">4K 144Hz</span>
+          </div>
+          <div class="product-content">
+            <span class="product-category">MONITOR · 4K</span>
+            <h3 class="product-title">Pantalla Gigante</h3>
+            <p class="product-description">Panel IPS 4K, 144Hz. Lo ves todo clarito, nomás. Pa' los que quieren calidad.</p>
+            <div class="product-actions">
+              <a href="https://wa.me/59170000000?text=Hola!%20Quiero%20la%20Pantalla%20Gigante" class="btn-buy" target="_blank">
+                COMPRAR
+              </a>
+              <a href="https://wa.me/59170000000?text=Hola!%20Cuanto%20cuesta%20la%20Pantalla%20Gigante" class="btn-price" target="_blank">
+                CONSULTAR PRECIO
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- HARDWARE 5 - Silla -->
+        <div class="product-card glow-card">
+          <div class="product-image">
+            <img src="assets/img/SillaPaLargo.jpg" alt="Silla pa Largo">
+            <span class="product-badge">ERGONÓMICA</span>
+          </div>
+          <div class="product-content">
+            <span class="product-category">SILLA · GAMING</span>
+            <h3 class="product-title">Silla pa' Largo</h3>
+            <p class="product-description">Soporte lumbar, reclinable 180°. Te sentás y no te querés levantar, cuña'o.</p>
+            <div class="product-actions">
+              <a href="https://wa.me/59170000000?text=Hola!%20Quiero%20la%20Silla%20pa%20Largo" class="btn-buy" target="_blank">
+                COMPRAR
+              </a>
+              <a href="https://wa.me/59170000000?text=Hola!%20Cuanto%20cuesta%20la%20Silla%20pa%20Largo" class="btn-price" target="_blank">
+                CONSULTAR PRECIO
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- HARDWARE 6 - Webcam -->
+        <div class="product-card glow-card">
+          <div class="product-image">
+            <img src="assets/img/WebCamPro.jpg" alt="Webcam que Se Ve Bien">
+            <span class="product-badge">4K HDR</span>
+          </div>
+          <div class="product-content">
+            <span class="product-category">WEBCAM · STREAMING</span>
+            <h3 class="product-title">Webcam que Se Ve Bien</h3>
+            <p class="product-description">Resolución 4K, autoenfoque. Salís re bien en tus streams, pues. Está bacán.</p>
+            <div class="product-actions">
+              <a href="https://wa.me/59170000000?text=Hola!%20Quiero%20la%20Webcam%20que%20Se%20Ve%20Bien" class="btn-buy" target="_blank">
+                COMPRAR
+              </a>
+              <a href="https://wa.me/59170000000?text=Hola!%20Cuanto%20cuesta%20la%20Webcam%20que%20Se%20Ve%20Bien" class="btn-price" target="_blank">
+                CONSULTAR PRECIO
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="container">
+      <h2>¿Necesitás asesoramiento, hermano?</h2>
+      <p>Nuestros expertos te ayudan a elegir el hardware que más te conviene. Escribinos nomás.</p>
+      <a href="https://wa.me/59170000000?text=Hola!%20Necesito%20asesoramiento%20sobre%20hardware" class="btn-whatsapp-large" target="_blank">
+        💬 HABLAR CON UN EXPERTO
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-icon">🎮</span>
+          <span class="logo-text">Llokalla <span class="accent">Gaming</span></span>
+          <p>Llokalla Gaming: Jugando a otro nivel © 2026</p>
+        </div>
+        
+        <div class="footer-links">
+          <a href="juegos.html">Juegos</a>
+          <a href="hardware.html">Hardware</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="informe.html">Informe</a>
+          
+        </div>
+
+        <div class="footer-contact">
+          <p>¿Necesitás ayuda, hermano?</p>
+          <a href="https://wa.me/59170000000" class="btn-whatsapp" target="_blank">
+            💬 Escribinos
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

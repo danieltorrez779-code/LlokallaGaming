@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de juegos AAA - Llokalla Gaming Bolivia">
+  <title>Juegos - Llokalla Gaming</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- ✅ Estilos específicos para video de fondo en juegos.html -->
+  <style>
+    /* Video de fondo full screen */
+    .hero-video {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      min-width: 100% !important;
+      min-height: 100% !important;
+      object-fit: cover !important;
+      z-index: -2 !important;
+    }
+
+    /* Overlay oscuro MÁS SUAVE para que se note el video */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        rgba(8, 9, 10, 0.3) 0%,
+        rgba(8, 9, 10, 0.5) 50%,
+        rgba(8, 9, 10, 0.7) 100%
+      );
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* Quitar el fondo sólido del page-hero */
+    .page-hero {
+      background: transparent !important;
+      padding: 10rem 0 4rem;
+    }
+
+    /* Quitar el fondo sólido de products-section */
+    .products-section {
+      background: transparent !important;
+    }
+
+    /* Quitar el fondo sólido del cta-final */
+    .cta-final {
+      background: transparent !important;
+    }
+
+    /* Tarjetas con fondo semi-transparente y blur */
+    .product-card {
+      background: linear-gradient(145deg, rgba(26, 26, 46, 0.85), rgba(15, 15, 26, 0.9)) !important;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    /* Navbar con fondo más sólido */
+    .navbar {
+      background: rgba(8, 9, 10, 0.85) !important;
+    }
+  </style>
+
+</head>
+<body>
+  <!-- Video de fondo -->
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="assets/video/gta-v-pause-theme.mp4" type="video/mp4">
+  </video>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🎮</span>
+        <span class="logo-text">Llokalla <span class="accent">Gaming</span></span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="juegos.html" class="nav-link active">Juegos</a></li>
+        <li><a href="hardware.html" class="nav-link">Hardware</a></li>
+        <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+        <li><a href="informe.html" class="nav-link">Informe</a></li>
+      </ul>
+
+      <button class="nav-toggle" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="page-title">NUESTROS JUEGOS</h1>
+      <p class="page-subtitle">Los títulos que están rompiendo, pues</p>
+    </div>
+  </section>
+
+  <section class="products-section">
+    <div class="container">
+      <div class="products-grid">
+        
+        <!-- JUEGO 1 - RPG con jerga boliviana -->
+        <div class="product-card glow-card">
+          <div class="product-image">
+            <img src="assets/img/LaPazNocturna.jpg" alt="Sombras del Cerro ">
+            
+            <span class="product-badge">NUEVO</span>
+          </div>
+          <div class="product-content">
+            <span class="product-category">RPG · AVENTURA</span>
+            <h3 class="product-title">Sombras del Cerro</h3>
+            <p class="product-description">Pues hermano, acá cada decisión te cambia el rumbo. ¿Tenés cuero pa' entrar al mundo oscuro?</p>
+            <div class="product-actions">
+              <a href="https://wa.me/59170000000?text=Hola!%20Quiero%20comprar%20Sombras%20del%20Cerro" class="btn-buy" target="_blank">
+                COMPRAR
+              </a>
+              <a href="https://wa.me/59170000000?text=Hola!%20Cuanto%20cuesta%20Sombras%20del%20Cerro" class="btn-price" target="_blank">
+                CONSULTAR PRECIO
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- JUEGO 2 - FPS con jerga boliviana -->
+        <div class="product-card glow-card">
+          <div class="product-image">
+            <img src="assets/img/FullVelocidad.jpg" alt="Full Velocidad">
+            <span class="product-badge">POPULAR</span>
+          </div>
+          <div class="product-content">
+            <span class="product-category">FPS · COMPETITIVO</span>
+            <h3 class="product-title">Full Velocidad</h3>
+            <p class="product-description">Acción a toda máquina, pues. Entrás, disparás y salís campeón. Sin vueltas, nomás.</p>
+            <div class="product-actions">
+              <a href="https://wa.me/59170000000?text=Hola!%20Quiero%20comprar%20Full%20Velocidad" class="btn-buy" target="_blank">
+                COMPRAR
+              </a>
+              <a href="https://wa.me/59170000000?text=Hola!%20Cuanto%20cuesta%20Full%20Velocidad" class="btn-price" target="_blank">
+                CONSULTAR PRECIO
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- JUEGO 3 - MOBA con jerga boliviana -->
+        <div class="product-card glow-card">
+          <div class="product-image">
+            <img src="assets/img/LaGranPelea.jpg" alt="La Gran Pelea">
+            <span class="product-badge">OFERTA</span>
+          </div>
+          <div class="product-content">
+            <span class="product-category">MOBA · ESTRATEGIA</span>
+            <h3 class="product-title">La Gran Pelea</h3>
+            <p class="product-description">Armás tu equipo y salís a romperla, cuña'o. Estrategia pura pa' los que saben jugar.</p>
+            <div class="product-actions">
+              <a href="https://wa.me/59170000000?text=Hola!%20Quiero%20comprar%20La%20Gran%20Pelea" class="btn-buy" target="_blank">
+                COMPRAR
+              </a>
+              <a href="https://wa.me/59170000000?text=Hola!%20Cuanto%20cuesta%20La%20Gran%20Pelea" class="btn-price" target="_blank">
+                CONSULTAR PRECIO
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- JUEGO 4 - Open World con jerga boliviana -->
+        <div class="product-card glow-card">
+          <div class="product-image">
+            <img src="assets/img/MundoLibre.jpg" alt="Mundo Libre">
+          </div>
+          <div class="product-content">
+            <span class="product-category">OPEN WORLD</span>
+            <h3 class="product-title">Mundo Libre</h3>
+            <p class="product-description">Explorás hasta el último rincón, hermano. Aventura sin límites, nomás. Está bacán.</p>
+            <div class="product-actions">
+              <a href="https://wa.me/59170000000?text=Hola!%20Quiero%20comprar%20Mundo%20Libre" class="btn-buy" target="_blank">
+                COMPRAR
+              </a>
+              <a href="https://wa.me/59170000000?text=Hola!%20Cuanto%20cuesta%20Mundo%20Libre" class="btn-price" target="_blank">
+                CONSULTAR PRECIO
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- JUEGO 5 - Horror con jerga boliviana -->
+        <div class="product-card glow-card">
+          <div class="product-image">
+            <img src="assets/img/TenesAguante.jpg" alt="Tenés Aguante">
+            <span class="product-badge">EXCLUSIVO</span>
+          </div>
+          <div class="product-content">
+            <span class="product-category">HORROR · SURVIVAL</span>
+            <h3 class="product-title">¿Tenés Aguante?</h3>
+            <p class="product-description">Si te asustás fácil, mejor ni lo abras, pues. Horror de verdad pa' los valientes. ¡Ala pucha!</p>
+            <div class="product-actions">
+              <a href="https://wa.me/59170000000?text=Hola!%20Quiero%20comprar%20Tenés%20Aguante" class="btn-buy" target="_blank">
+                COMPRAR
+              </a>
+              <a href="https://wa.me/59170000000?text=Hola!%20Cuanto%20cuesta%20Tenés%20Aguante" class="btn-price" target="_blank">
+                CONSULTAR PRECIO
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- JUEGO 6 - Racing con jerga boliviana -->
+        <div class="product-card glow-card">
+          <div class="product-image">
+            <img src="assets/img/ATodoGas.jpg" alt="A Todo Gas">
+          </div>
+          <div class="product-content">
+            <span class="product-category">RACING · ARCADE</span>
+            <h3 class="product-title">A Todo Gas</h3>
+            <p class="product-description">Carreras locas, pues. Acelerás a fondo y no mirás atrás. ¡Jala perfecto, hermano!</p>
+            <div class="product-actions">
+              <a href="https://wa.me/59170000000?text=Hola!%20Quiero%20comprar%20A%20Todo%20Gas" class="btn-buy" target="_blank">
+                COMPRAR
+              </a>
+              <a href="https://wa.me/59170000000?text=Hola!%20Cuanto%20cuesta%20A%20Todo%20Gas" class="btn-price" target="_blank">
+                CONSULTAR PRECIO
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="container">
+      <h2>¿No encontrás lo que buscás?</h2>
+      <p>Escribinos nomás, hermano. Te conseguimos cualquier título que querás.</p>
+      <a href="https://wa.me/59170000000?text=Hola!%20Busco%20un%20juego%20especial" class="btn-whatsapp-large" target="_blank">
+        💬 HABLAR POR WHATSAPP
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-icon">🎮</span>
+          <span class="logo-text">Llokalla <span class="accent">Gaming</span></span>
+          <p>Llokalla Gaming: Jugando a otro nivel © 2026</p>
+        </div>
+        
+        <div class="footer-links">
+          <a href="juegos.html">Juegos</a>
+          <a href="hardware.html">Hardware</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="informe.html">Informe</a>
+        </div>
+
+        <div class="footer-contact">
+          <p>¿Necesitás ayuda, hermano?</p>
+          <a href="https://wa.me/59170000000" class="btn-whatsapp" target="_blank">
+            💬 Escribinos
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

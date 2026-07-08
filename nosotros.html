@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sobre GamerNest - Tu plataforma de gaming premium">
+  <title>Nosotros - GamerNest</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- ✅ Estilos específicos para video de fondo en nosotros.html -->
+  <style>
+    /* Video de fondo full screen */
+    .hero-video {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      min-width: 100% !important;
+      min-height: 100% !important;
+      object-fit: cover !important;
+      z-index: -2 !important;
+    }
+
+    /* Overlay oscuro suave para que se note el video */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        rgba(8, 9, 10, 0.3) 0%,
+        rgba(8, 9, 10, 0.5) 50%,
+        rgba(8, 9, 10, 0.7) 100%
+      );
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* Quitar el fondo sólido del page-hero */
+    .page-hero {
+      background: transparent !important;
+      padding: 10rem 0 4rem;
+    }
+
+    /* Quitar el fondo sólido de about-section */
+    .about-section {
+      background: transparent !important;
+    }
+
+    /* Quitar el fondo sólido de values-section */
+    .values-section {
+      background: transparent !important;
+    }
+
+    /* Quitar el fondo sólido de stats-section */
+    .stats-section {
+      background: transparent !important;
+    }
+
+    /* Quitar el fondo sólido del cta-final */
+    .cta-final {
+      background: transparent !important;
+    }
+
+    /* Tarjetas de valores con fondo semi-transparente y blur */
+    .value-card {
+      background: linear-gradient(145deg, rgba(26, 26, 46, 0.85), rgba(15, 15, 26, 0.9)) !important;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    /* Estadísticas con fondo semi-transparente */
+    .stat-card {
+      background: linear-gradient(145deg, rgba(26, 26, 46, 0.7), rgba(15, 15, 26, 0.8)) !important;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: 16px;
+      padding: 2rem;
+    }
+
+    /* Navbar con fondo más sólido */
+    .navbar {
+      background: rgba(8, 9, 10, 0.85) !important;
+    }
+
+    /* Ajustar el about-content para que se lea bien */
+    .about-description {
+      background: rgba(8, 9, 10, 0.4);
+      padding: 1rem;
+      border-radius: 8px;
+      backdrop-filter: blur(5px);
+    }
+  </style>
+
+</head>
+<body>
+  <!-- Video de fondo -->
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="assets/video/gta-v-pause-theme.mp4" type="video/mp4">
+  </video>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">⚔</span>
+        <span class="logo-text">GamerNest</span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="juegos.html" class="nav-link">Juegos</a></li>
+        <li><a href="hardware.html" class="nav-link">Hardware</a></li>
+        <li><a href="nosotros.html" class="nav-link active">Nosotros</a></li>
+        <li><a href="informe.html" class="nav-link">Informe</a></li>
+      </ul>
+
+      <button class="nav-toggle" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="container">
+      <h1 class="page-title">SOBRE NOSOTROS</h1>
+      <p class="page-subtitle">La historia detrás de GamerNest</p>
+    </div>
+  </section>
+
+  <!-- Sección de Historia -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2 class="section-title-left">NUESTRA MISIÓN</h2>
+          <p class="about-description">
+            En GamerNest, creemos que el gaming es más que un pasatiempo: es una forma de vida. 
+            Nuestra misión es proporcionar a los gamers más exigentes acceso a 
+            los mejores títulos y hardware del mercado, con un servicio personalizado que entiende 
+            tus necesidades.
+          </p>
+          <p class="about-description">
+            No somos solo una tienda, somos una comunidad de entusiastas que vive y respira gaming. 
+            Cada producto que ofrecemos ha sido seleccionado cuidadosamente para garantizar la 
+            máxima calidad y experiencia.
+          </p>
+        </div>
+
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800" alt="GamerNest Team">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Valores -->
+  <section class="values-section">
+    <div class="container">
+      <h2 class="section-title">NUESTROS VALORES</h2>
+      
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">🎯</div>
+          <h3>Calidad Premium</h3>
+          <p>Solo ofrecemos productos que cumplen con los más altos estándares de calidad</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">⚡</div>
+          <h3>Innovación Constante</h3>
+          <p>Siempre a la vanguardia de las últimas tendencias y tecnologías gaming</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">🤝</div>
+          <h3>Servicio Personalizado</h3>
+          <p>Atención directa y asesoramiento experto para cada cliente</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">🌟</div>
+          <h3>Comunidad</h3>
+          <p>Construimos relaciones duraderas con nuestros clientes y la comunidad gamer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Estadísticas -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3 class="stat-number">2M+</h3>
+          <p class="stat-label">Jugadores Activos</p>
+        </div>
+
+        <div class="stat-card">
+          <h3 class="stat-number">500+</h3>
+          <p class="stat-label">Títulos Disponibles</p>
+        </div>
+
+        <div class="stat-card">
+          <h3 class="stat-number">98%</h3>
+          <p class="stat-label">Satisfacción</p>
+        </div>
+
+        <div class="stat-card">
+          <h3 class="stat-number">24/7</h3>
+          <p class="stat-label">Soporte</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="cta-final">
+    <div class="container">
+      <h2>¿Listo para unirte a la comunidad?</h2>
+      <p>Contáctanos y descubre por qué somos la elección #1 de gamers profesionales</p>
+      <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20saber%20más%20sobre%20GamerNest" 
+         class="btn-whatsapp-large" target="_blank">
+        💬 HABLAR CON NOSOTROS
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-icon">⚔</span>
+          <span class="logo-text">GamerNest</span>
+          <p>Play Beyond Limits © 2026</p>
+        </div>
+        
+        <div class="footer-links">
+          <a href="juegos.html">Juegos</a>
+          <a href="hardware.html">Hardware</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="informe.html">Informe</a>
+        </div>
+
+        <div class="footer-contact">
+          <p>¿Necesitas ayuda?</p>
+          <a href="https://wa.me/5491112345678" class="btn-whatsapp" target="_blank">
+            💬 Contáctanos
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

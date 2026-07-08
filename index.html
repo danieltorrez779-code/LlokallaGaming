@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Llokalla Gaming - La tienda gamer de Bolivia. Juegos AAA y hardware premium.">
+  <title>Llokalla Gaming - Jugando a otro nivel</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ============================================
+       NAVBAR - Glassmorphism Effect
+       ============================================ -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🎮</span>
+        <span class="logo-text">Llokalla <span class="accent">Gaming</span></span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link active">Inicio</a></li>
+        <li><a href="juegos.html" class="nav-link">Juegos</a></li>
+        <li><a href="hardware.html" class="nav-link">Hardware</a></li>
+        <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+        <li><a href="informe.html" class="nav-link">Informe</a></li>
+      </ul>
+
+      <button class="nav-toggle" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       HERO SECTION - Video Background
+       ============================================ -->
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="assets/video/genshin-impact-wallsflow-com.mp4" type="video/mp4">
+    </video>
+    
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-content">
+      <span class="hero-tag">LA TIENDA GAMER DE BOLIVIA</span>
+      <h1 class="hero-title">JUEGA A <br><span class="accent">OTRO NIVEL</span></h1>
+      <p class="hero-subtitle">Pues hermano, acá tenemos los mejores juegos y el hardware que jala perfecto. Todo pa' que la rompas.</p>
+      
+      <a href="juegos.html" class="btn-primary btn-glow">
+        VER CATÁLOGO
+      </a>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SECCIÓN DE CATEGORÍAS DESTACADAS
+       ============================================ -->
+  <section class="categories">
+    <div class="container">
+      <h2 class="section-title">EXPLORÁ NUESTRO UNIVERSO</h2>
+      
+      <div class="category-grid">
+        <a href="juegos.html" class="category-card glow-card">
+          <div class="category-icon">🎮</div>
+          <h3>Juegos AAA</h3>
+          <p>Los títulos que están rompiendo, pues. Ediciones limitadas y exclusivos.</p>
+          <span class="category-cta">Explorar →</span>
+        </a>
+
+        <a href="hardware.html" class="category-card glow-card">
+          <div class="category-icon">⚡</div>
+          <h3>Hardware Premium</h3>
+          <p>Equipamiento que jala de verdad. Pa' los que quieren jugar como profesionales.</p>
+          <span class="category-cta">Ver productos →</span>
+        </a>
+
+        <a href="nosotros.html" class="category-card glow-card">
+          <div class="category-icon">🏆</div>
+          <h3>Comunidad</h3>
+          <p>Somos gamers como vos, cuña'o. Unite a la familia Llokalla.</p>
+          <span class="category-cta">Conocer más →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-icon">🎮</span>
+          <span class="logo-text">Llokalla <span class="accent">Gaming</span></span>
+          <p>Llokalla Gaming: Jugando a otro nivel © 2026</p>
+        </div>
+        
+        <div class="footer-links">
+          <a href="juegos.html">Juegos</a>
+          <a href="hardware.html">Hardware</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="informe.html">Informe</a>
+        </div>
+
+        <div class="footer-contact">
+          <p>¿Necesitás ayuda, hermano?</p>
+          <a href="https://wa.me/59170000000" class="btn-whatsapp" target="_blank">
+            💬 Escribinos
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
